@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
     // Загружаем sidebar
-    fetch("./layouts/sidebar.html")
+    fetch("src/layouts/sidebar.html")
         .then(res => res.text())
         .then(data => {
             document.getElementById("sidebar").innerHTML = data;
@@ -19,35 +19,35 @@ document.addEventListener("DOMContentLoaded", () => {
                     // Загружаем контент по разделу
                     switch (sectionName) {
                         case "Дашборд":
-                            loadContent("./pages/dashboard.html");
+                            loadContent("src/pages/dashboard.html");
                             break;
                         case "Клиенты":
-                            loadContent("./pages/customers.html");
+                            loadContent("src/pages/customers.html");
                             break;
                         case "Договоры":
-                            loadContent("./pages/contracts.html");
+                            loadContent("src/pages/contracts.html");
                             break;
                         case "Товары":
-                            loadContent("./pages/products.html");
+                            loadContent("src/pages/products.html");
                             break;
                         case "Платежи":
-                            loadContent("./pages/payments.html");
+                            loadContent("src/pages/payments.html");
                             break;
                         case "Отчёты":
-                            loadContent("./pages/reports.html");
+                            loadContent("src/pages/reports.html");
                             break;
                         case "Пользователи":
-                            loadContent("./pages/users.html");
+                            loadContent("src/pages/users.html");
                             break;
                         case "Настройки":
-                            loadContent("./pages/settings.html");
+                            loadContent("src/pages/settings.html");
                             break;
                     }
                 });
             });
 
             // при первой загрузке → показать Дашборд
-            loadContent("./pages/dashboard.html");
+            loadContent("src/pages/dashboard.html");
 
             // сразу выделить Дашборд активным
             const dashboardLink = Array.from(document.querySelectorAll("#sidebar a"))
