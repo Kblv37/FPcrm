@@ -1,0 +1,82 @@
+<!-- Карточки статистики -->
+<section class="stats" style="
+    height: 10em;
+    display: flex;
+    gap: 2em;
+    padding: 2em 2em 0 2em;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    ">
+    <div class="stats-card">
+        <p class="stats-card__label">Активных договоров</p>
+        <p class="stats-card__value">312</p>
+        <span class="stats-card__growth">+4%</span>
+    </div>
+
+    <div class="stats-card">
+        <p class="stats-card__label">Платежи сегодня</p>
+        <p class="stats-card__value">48</p>
+        <p class="stats-card__value">₽ 1 240 000</p>
+    </div>
+
+    <div class="stats-card">
+        <p class="stats-card__label">Просрочено</p>
+        <p class="stats-card__value">27</p>
+        <p class="stats-card__value">₽ 380 500</p>
+    </div>
+
+    <div class="stats-card">
+        <p class="stats-card__label">Новые клиенты</p>
+        <p class="stats-card__value">12</p>
+        <span class="stats-card__info">за неделю</span> 
+    </div>
+</section>
+
+<!-- Таблица платежей -->
+<section class="payments">
+    <h2>Ближайшие платежи</h2>
+    <table class="table-payments">
+        <thead>
+            <tr>
+                <th>Клиент</th>
+                <th>Договор №</th>
+                <th>Дата платежа</th>
+                <th>Сумма</th>
+                <th>Статус</th>
+                <th>Действие</th>
+                <th>Связь</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Анна Петрова</td>
+                <td>№ 10423</td>
+                <td>21.08.2025</td>
+                <td>₽ 24 900</td>
+                <td class="status status--pending">Ожидается</td>
+                <td><button class="btn">Оплатить</button></td>
+                <td><button class="btn">Связаться</button></td>
+            </tr>
+            <tr>
+                <td>Жахонгир Тураев</td>
+                <td>№ 10387</td>
+                <td>22.08.2025</td>
+                <td>₽ 15 700</td>
+                <td class="status status--paid">Оплачено</td>
+                <td><button class="btn">Оплатить</button></td>
+                <td><button class="btn">Связаться</button></td>
+            </tr>
+            <tr>
+                <td>Дмитрий Руденко</td>
+                <td>№ 10365</td>
+                <td>23.08.2025</td>
+                <td>₽ 29 500</td>
+                <td class="status status--overdue">Просрочено (1 дн)</td>
+                <td><button class="btn">Оплатить</button></td>
+                <td><button class="btn">Связаться</button></td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+<link rel="stylesheet" href="/css/sections/dashboard.css">
