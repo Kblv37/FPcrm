@@ -1,0 +1,28 @@
+#sidebar {
+  width: 200px;
+  background: #111827;
+  color: #fff;
+  flex-shrink: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar__menu-item img {
+    height: 1.5em;
+    width: auto;
+}
+
+.sidebar__menu-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: white;
+  padding: 1em 0.8em 1em 2em;
+  border-bottom: 1px solid #1F2937;
+}
+
+.active {
+  background-color: #0B0F1A;
+  border: none;
+}
