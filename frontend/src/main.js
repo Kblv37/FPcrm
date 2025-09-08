@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
     // Загружаем header
-    fetch("./layouts/header.html")
+    fetch("src/layouts/header.html")
         .then(res => res.text())
         .then(data => {
             document.getElementById("header").innerHTML = data;
