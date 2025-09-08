@@ -1,0 +1,9 @@
+{
+  "name": "FPcrm",
+  "version": "1.0.0",
+  "description": "FlexiPay CRM frontend",
+  "scripts": {
+    "start": "echo 'No build script needed'"
+  },
+  "dependencies": {}
+}
