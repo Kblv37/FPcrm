@@ -2,15 +2,161 @@
     flex: 1;
     min-width: 12em;
     max-width: 20em;
-    height: 5em;
     padding: 1em;
     background: #111827;
     border: 1px solid #1F2937;
     border-radius: 10px;
     box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.3em;
+    position: relative;
 }
 
+/* Лейбл внутри карточки */
 .stats-card__label {
-    font-size: 1em;
-    color: #6B7280;
+    font-size: 0.85em;
+    color: #9CA3AF;
+    background: rgba(255,255,255,0.05);
+    padding: 0.2em 0.6em;
+    border-radius: 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Значение */
+.stats-card__value {
+    font-size: 1.6em;
+    font-weight: 600;
+    color: #F9FAFB;
+    line-height: 1.2;
+}
+
+/* Рост/инфо */
+.stats-card__growth,
+.stats-card__info {
+    font-size: 0.8em;
+    color: #10B981; /* зелёный для роста */
+}
+
+.stats-card p {
+    margin: 0;
+}
+
+
+
+/* Скелетон-анимация */
+.skeleton {
+    color: transparent !important;     /* Скрываем текст */
+    position: relative;
+    border-radius: 6px;
+    background: linear-gradient(90deg, #2b2f3a 25%, #3b4050 50%, #2b2f3a 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+}
+
+/* Чтобы размеры совпадали с текстом */
+.stats-card__value.skeleton {
+    width: 60%;
+    height: 1.6em;
+}
+
+.stats-card__growth.skeleton,
+.stats-card__info.skeleton {
+    width: 40%;
+    height: 1em;
+    display: inline-block;
+}
+
+@keyframes shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+}
+
+
+
+
+.payments {
+    margin: 1em; /* вместо 2em */
+    background: #111827;
+    border: 1px solid #1F2937;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    padding: 1em 1.5em;
+}
+
+.payments h2 {
+    margin: 0 0 0.8em 0;
+    font-size: 1.2em;
+    font-weight: 600;
+    color: #F9FAFB;
+}
+
+/* Таблица */
+.table-payments {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95em;
+}
+
+.table-payments th,
+.table-payments td {
+    padding: 0.6em 0.8em;
+    text-align: left;
+}
+
+.table-payments thead th {
+    background: #1F2937;
+    color: #9CA3AF;
+    font-weight: 500;
+    border-bottom: 1px solid #374151;
+}
+
+.table-payments tbody tr {
+    border-bottom: 1px solid #1F2937;
+}
+
+.table-payments tbody tr:hover {
+    background: rgba(255,255,255,0.02);
+}
+
+/* Статусы */
+.status {
+    font-weight: 500;
+    padding: 0.2em 0.5em;
+    border-radius: 6px;
+    font-size: 0.85em;
+}
+
+.status--pending {
+    background: rgba(251, 191, 36, 0.15);
+    color: #FBBF24;
+}
+
+.status--paid {
+    background: rgba(16, 185, 129, 0.15);
+    color: #10B981;
+}
+
+.status--overdue {
+    background: rgba(239, 68, 68, 0.15);
+    color: #EF4444;
+}
+
+/* Кнопки */
+.btn {
+    background: #1F2937;
+    color: #F9FAFB;
+    border: 1px solid #374151;
+    padding: 0.3em 0.8em;
+    border-radius: 6px;
+    font-size: 0.85em;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.btn:hover {
+    background: #374151;
 }

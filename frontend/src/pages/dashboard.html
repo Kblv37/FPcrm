@@ -1,6 +1,5 @@
 <!-- Карточки статистики -->
 <section class="stats" style="
-    height: 10em;
     display: flex;
     gap: 2em;
     padding: 2em 2em 0 2em;
@@ -9,31 +8,37 @@
     ">
     <div class="stats-card">
         <p class="stats-card__label">Активных договоров</p>
-        <p class="stats-card__value">312</p>
-        <span class="stats-card__growth">+4%</span>
+        <p class="stats-card__value skeleton"></p>
+        <span class="stats-card__growth skeleton"></span>
     </div>
 
     <div class="stats-card">
         <p class="stats-card__label">Платежи сегодня</p>
-        <p class="stats-card__value">48</p>
-        <p class="stats-card__value">₽ 1 240 000</p>
+        <p class="stats-card__value skeleton"></p>
+        <p class="stats-card__value skeleton"></p>
     </div>
 
     <div class="stats-card">
         <p class="stats-card__label">Просрочено</p>
-        <p class="stats-card__value">27</p>
-        <p class="stats-card__value">₽ 380 500</p>
+        <p class="stats-card__value skeleton"></p>
+        <p class="stats-card__value skeleton"></p>
     </div>
 
     <div class="stats-card">
         <p class="stats-card__label">Новые клиенты</p>
-        <p class="stats-card__value">12</p>
-        <span class="stats-card__info">за неделю</span> 
+        <p class="stats-card__value skeleton"></p>
+        <span class="stats-card__info skeleton"></span>
     </div>
 </section>
 
 <!-- Таблица платежей -->
-<section class="payments">
+<section class="payments" style="
+    margin: 2em 2em 0 2em;
+    background: #111827;
+    border: 1px solid #1F2937;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    ">
     <h2>Ближайшие платежи</h2>
     <table class="table-payments">
         <thead>
@@ -80,3 +85,13 @@
 </section>
 
 <link rel="stylesheet" href="src/pages/styles/dashboard.css">
+
+<script>
+    // Пример "эмуляции загрузки"
+    setTimeout(() => {
+        document.querySelectorAll('.skeleton').forEach(el => {
+            el.classList.remove('skeleton');
+        });
+    }, 2000);
+
+</script>
